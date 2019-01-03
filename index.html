@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #282c33;
+        color: #6cdaf7;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      a {
+        color: #b1b3b5;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Are React Hooks Ready?</h1>
+    <div id="root">Loading ......</div>
+    <script type="text/babel">
+      setTimeout(() => {
+        const message = React.useState ? "HOOKS ARE READY!" : "NOT READY YET!";
+
+        const version = React.version;
+        const App = (
+          <div>
+            <h2>{message}</h2>
+            <p>Current stable version: {version}</p>
+            <h3>
+              <a href="https://twitter.com/chrislaughlin">@chrislaughlin</a>
+            </h3>
+          </div>
+        );
+        ReactDOM.render(App, document.getElementById("root"));
+      }, 2000);
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+  </body>
+</html>
