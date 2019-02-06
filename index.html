@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@16.8.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react@16.8.0/umd/react-dom.development.js"></script>
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -19,8 +19,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-	font-size: 1.5em; text-align: center;
-	margin: 0 auto;
+      	font-size: 1.5em; text-align: center;
+      	margin: 0 auto;
       }
       a {
         color: #b1b3b5;
@@ -28,15 +28,19 @@
       }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78587148-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-78587148-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-78587148-2');
-</script>
-
+      gtag("config", "UA-78587148-2");
+    </script>
   </head>
 
   <body>
